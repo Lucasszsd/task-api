@@ -8,8 +8,8 @@ class CategoryController {
         this.create = this.create.bind(this);
     }
     async create(req: Request, res: Response) {
-        const task = await this.categoryService.create(req.body);
-        return res.json(task);
+        const category = await this.categoryService.create(req.body);
+        return res.json(category);
     }
 }
 export default new CategoryController();
