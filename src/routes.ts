@@ -18,8 +18,15 @@ try {
     console.error(error)
 }
 
+
 try {
     routes.post('/category', categoryController.create);
+} catch (error) {
+    console.error(error)
+}
+
+try {
+    routes.get('/user/:id',userController.userLogin);
 } catch (error) {
     console.error(error)
 }
