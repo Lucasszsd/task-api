@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import taskController from './task/taskController'
 import userController from './user/userController'
+import categoryController from './category/categoryController';
 
 
 const routes = Router()
@@ -13,6 +14,12 @@ try {
 
 try {
     routes.post('/user', userController.create);
+} catch (error) {
+    console.error(error)
+}
+
+try {
+    routes.post('/category', categoryController.create);
 } catch (error) {
     console.error(error)
 }
